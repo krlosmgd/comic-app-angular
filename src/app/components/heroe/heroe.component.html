@@ -1,0 +1,26 @@
+<h1> {{heroe.nombre}} <small>{{heroe.aparicion | date:'mediumDate' }}</small></h1>
+<!--
+  
+short
+medium
+long
+full
+shortDate
+mediumDate
+longDate
+fullDate
+shortTime
+mediumTime
+longTime
+fullTime
+-->
+<hr>
+<div class="row" class="animated fadeIn fast">
+  <div class="col-md-4">
+      <img [src]="heroe.img" alt="..." class="img-fluid">
+  </div>
+  <div class="col-md-8">
+    <span *ngIf="heroe.casa==='DC'">es DC</span>  <span *ngIf="heroe.casa==='Marvel'">es Marvel</span>
+    <p>{{heroe.bio}}</p>
+    </div>
+</div>
